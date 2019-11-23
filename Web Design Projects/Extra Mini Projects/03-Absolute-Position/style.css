@@ -1,0 +1,13 @@
+body {
+	background-color: #eee;
+}
+
+section.section {
+	position: relative;
+}
+
+h1.title {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}

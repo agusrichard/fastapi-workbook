@@ -1,0 +1,8 @@
+p::-moz-selection {
+	background: yellow;
+	color: red;
+}
+
+h1{
+	font-family: Arial;
+}

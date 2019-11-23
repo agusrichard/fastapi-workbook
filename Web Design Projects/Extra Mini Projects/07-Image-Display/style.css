@@ -1,0 +1,15 @@
+img {
+	width: 200px;
+	height: 160px;
+	border: 1px solid red;
+	opacity: 0.7;
+}
+div.img-container {
+	background-color: #eee;
+	width: 614px;
+	margin: auto;
+}
+
+img:hover {
+	opacity: 1.0;
+}

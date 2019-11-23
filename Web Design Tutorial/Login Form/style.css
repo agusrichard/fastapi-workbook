@@ -1,0 +1,23 @@
+body {
+	background: url(images/background.jpg) no-repeat;
+	font-family: Arial;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+.login-box {
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+
+}
+
+.login-box h1 {
+	float: left;
+	font-size: 40px;
+	border-bottom: 6px solid white;
+}
