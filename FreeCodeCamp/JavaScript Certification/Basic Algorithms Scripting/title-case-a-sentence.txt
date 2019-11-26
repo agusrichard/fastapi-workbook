@@ -1,0 +1,23 @@
+function titleCase(str) {
+
+	let regex = /(\w)(\S*\s*)/g;
+	let list = str.match(regex);
+	// console.log(str.match(regex));
+	let newList = [];
+	let first = "";
+	let rest = "";
+	for (let i = 0; i < list.length; i++) {
+		// console.log(list[i]);
+		first = list[i][0];
+		rest = list[i].slice(1, list[i].length)
+		newList.push(first.toUpperCase()+rest.toLowerCase())
+	}
+	console.log(newList);
+	let newStr = newList[0];
+	for (let i = 1; i < newList.length; i++) {
+		newStr += newList[i];
+	}
+	return newStr;
+}
+
+titleCase("I'm a little tea pot");

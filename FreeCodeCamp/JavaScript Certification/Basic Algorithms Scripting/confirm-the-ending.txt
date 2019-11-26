@@ -1,0 +1,10 @@
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  let reStr = `(${target})$`
+  let regex = new RegExp(reStr, 'g');
+  return regex.test(str);
+  // console.log(regex)
+ }
+
+confirmEnding("Bastian", "n");
