@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Learning jQuery</title>
+	<style>
+		body {
+			background: #f3f3f3;
+		}
+		h1 {
+			background: #999;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+			margin-top: 0;
+		}
+
+		.row {
+			background-color: #555;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('#btn1').click(function(){
+				$('#para2').hide();
+			})
+		})
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Learning jQuery</h1>
+	</header>
+	<div class="container">
+		<p id="para1">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, harum illo. Libero quisquam, praesentium at consectetur sequi repudiandae vitae ab tempore id impedit nisi dignissimos illo perferendis ea eius. Ratione adipisci reiciendis enim quidem repudiandae. Impedit illo aliquam, enim, ducimus optio accusamus laborum reprehenderit, vel sit consectetur eveniet! Quam neque, veniam hic esse tempore facilis, nihil accusantium voluptatibus vel et sint, aliquid quibusdam explicabo. Sequi distinctio, placeat fugiat! Nemo cumque reprehenderit quas laudantium ab architecto placeat, aspernatur officia ad non minus? Repellendus delectus, eligendi minima voluptatem accusamus nulla saepe, dolores temporibus consequatur nemo nihil impedit dolorum veniam laudantium sit dolore deleniti amet veritatis. Ullam nesciunt ipsum maiores, molestiae repellendus sit alias mollitia nam repellat qui exercitationem numquam vero. Ullam sunt suscipit dolor repellendus corrupti enim incidunt inventore officiis labore architecto, ipsam ipsum quas fugiat eveniet nemo iure saepe officia, distinctio quasi vel! Et, corporis illum necessitatibus atque exercitationem voluptas dolorum.</p>
+	</div>
+		<button id="btn1">Push me!</button>
+		<p id="para2" style="color: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat inventore pariatur repudiandae excepturi, dolorum nobis voluptates voluptate, perspiciatis quae ut veritatis reprehenderit dicta a sapiente assumenda cupiditate aperiam, alias sunt.</p>
+</body>
+</html>

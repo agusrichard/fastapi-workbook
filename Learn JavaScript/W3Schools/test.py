@@ -1,1 +1,0 @@
-print("Sekardayu Hana")

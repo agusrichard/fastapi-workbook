@@ -1,0 +1,7 @@
+const MyComponent = function() {
+  // change code below this line
+  return (
+    <div>SomeString to include</div>
+  );
+  // change code above this line
+}

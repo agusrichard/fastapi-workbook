@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hover Tabs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<h2>Hover Tabs</h2>
+<p>Move the mouse over a button inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'London')">London</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div class="clearfix"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+ 

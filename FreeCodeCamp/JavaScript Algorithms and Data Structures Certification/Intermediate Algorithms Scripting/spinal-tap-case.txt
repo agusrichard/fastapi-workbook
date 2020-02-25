@@ -1,0 +1,13 @@
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+  const regex = /\s|[_-]|([A-Z][a-z]+)/;
+  var splitted = str.split(regex);
+  var filtered = splitted.filter(item => item);
+  var lower = filtered.map(item => item.toLowerCase());
+
+  return lower.join("-");
+  
+}
+
+spinalCase('This Is Spinal Tap');

@@ -1,0 +1,17 @@
+function whatIsInAName(collection, source) {
+
+	var srcKeys = Object.keys(source);
+	return collection.filter(function(obj) {
+
+		for (let i = 0; i < srcKeys.length; i++) {
+			var flag1 = obj.hasOwnProperty(srcKeys[i]);
+			var flag2 = obj[srcKeys[i]] === source[srcKeys[i]];
+			if (!flag1 || !flag2) {
+				return false;
+			} 
+		}
+		return true;
+	})
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });

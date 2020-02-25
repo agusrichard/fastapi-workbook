@@ -1,0 +1,20 @@
+function rot13(str) { // LBH QVQ VG!
+
+	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var resStr = "";
+	for (let i = 0; i < str.length; i++) {
+		if (alphabet.indexOf(str[i]) < 0) {
+			resStr += str[i];
+			continue;
+		} else {
+			var num = alphabet.indexOf(str[i]);
+			var shifted = (num+13)%26;
+			resStr += alphabet[shifted];
+		}
+	}
+
+	return resStr;
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");

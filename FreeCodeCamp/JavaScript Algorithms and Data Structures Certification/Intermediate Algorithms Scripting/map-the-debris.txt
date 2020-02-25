@@ -1,0 +1,18 @@
+function orbitalPeriod(arr) {
+	const GM = 398600.4418;
+	const earthRadius = 6367.4447;
+
+	function calculate(averageAltitude) {
+		return Math.round(2*Math.PI*(Math.sqrt((earthRadius+averageAltitude)**3 / GM)));
+	}
+
+	for (let i = 0; i < arr.length; i++) {
+		var averageAltitude = arr[i]["avgAlt"];
+		delete arr[i]["avgAlt"];
+		arr[i]["orbitalPeriod"] = calculate(averageAltitude);
+	}
+
+	return arr;
+}
+
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);

@@ -1,0 +1,35 @@
+function convertHTML(str) {
+	// &colon;&rpar;
+	var newStr = str.replace(/&/, "&amp;")
+	let flagLt = /</.test(newStr);
+	let flagGt = />/.test(newStr);
+	let flagQuot = /"/.test(newStr);
+	let flagApos = /'/.test(newStr);
+	// console.log(flagLt)
+	while (flagLt)  {
+		flagLt = /</.test(newStr);
+		newStr = newStr.replace(/</, "&lt;");
+		// console.log("run")
+	}
+
+	while (flagGt)  {
+		flagGt = />/.test(newStr);
+		newStr = newStr.replace(/>/, "&gt;");
+		// console.log("run")
+	}
+
+	while (flagQuot)  {
+		flagQuot = /"/.test(newStr);
+		newStr = newStr.replace(/"/, "&quot;");
+		// console.log("run")
+	}
+
+	while (flagApos) {
+		flagApos = /'/.test(newStr);
+		newStr = newStr.replace(/'/, "&apos;");
+	}
+
+	return newStr;
+}
+
+convertHTML("Dolce & Gabbana");

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Crash Course</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<style>
+		body {
+			font-size: 17px;
+			font-family: arial;
+			background-color: #f4f4f4;
+			line-height: 1.5em;
+		}
+
+		header {
+			background: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			border-bottom: 4px #000 solid;
+			margin-bottom: 10px;
+		}
+
+		#container {
+			width: 90%;
+			margin: auto;
+			padding: 10px;
+		}
+
+		.myClass {
+			color: blue;
+			background: black;
+		}
+	</style>
+</head>
+<body>	
+	<header>
+		<h1>jQuery Crash Course | DOM Manipulation</h1>
+	</header>
+	<div id="container">
+		<button id="btn1">Button 1</button>
+		<p class="para1">This is a paragraph</p>
+		<p class="para2">This is another paragraph</p>
+		<div id="myDiv"></div>
+		<input type="text" id="newItem">
+		<ul>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+		</ul>
+		<a href="https://google.com">Google</a>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// $('.para1').css({'color': 'red', 'background': '#acc'});
+			// // $('.para2').addClass('myClass');
+			// // $('.para2').removeClass('myClass');
+			// $('#btn1').click(function(){
+			// 	$('.para2').toggleClass('myClass');
+			// });
+
+			// // $('#myDiv').text("Hello World!")
+			// $('#myDiv').html("<h1>Hello World!</h1>");
+			// alert($('#myDiv').text());
+
+			// $('ul').append("<li>Append list item</l1>");
+			// $('ul').prepend("<li>Prepend list item</l1>");
+			// $('.para1').appendTo('.para2');
+			// $('.para1').prependTo('.para2');
+			// $('ul').before('<h4>Hello</h4>');
+			// $('ul').after('<h4>Hello</h4>');
+			// $('ul').empty();
+			// $('ul').detach();
+			// $('a').attr('target', '_blank');
+			// alert($('a').attr('href'));
+			// $('a').removeAttr('target');
+
+			// $('p').wrap('<h1>');
+			// $('p').wrapAll('<h1>');
+
+			// $('#newItem').keyup(function(e){
+			// 	var code = e.which();
+			// 	if (code == 13){
+			// 		e.preventDefault();
+			// 		$('ul').append("<li>"+e.target.value+"</li>");
+			// 	}
+			// });
+
+			var myArr = ['Agus', 'Sekar', 'Saskia', 'Arifa'];
+
+			$.each(myArr, function(i, val){
+				console.log(val);
+			});
+		});
+	</script>
+</body>
+</html>
