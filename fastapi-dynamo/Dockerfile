@@ -12,7 +12,8 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN apt-get update
 RUN pip install -r /app/requirements.txt
 
 EXPOSE 8000
+
+CMD ["python", "main.py"]

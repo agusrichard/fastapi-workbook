@@ -11,7 +11,7 @@
 			// Use -bullseye variants on local on arm64/Apple Silicon.
 			"VARIANT": "3.9",
 			// Options
-			"NODE_VERSION": "none"
+			"NODE_VERSION": "lts/*"
 		}
 	},
 
@@ -28,14 +28,7 @@
 		"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
 		"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
 		"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
-		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
-		"terminal.integrated.profiles.linux": {
-			"zsh": {
-				"path": "zsh",
-				"args": ["-l"]
-			}
-		},
-		"terminal.integrated.defaultProfile.linux": "zsh"
+		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
@@ -45,11 +38,15 @@
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [8000],
+	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "pip install -r requirements.txt",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"features": {
+		"docker-in-docker": "latest",
+		"git": "latest"
+	}
 }
