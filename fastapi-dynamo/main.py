@@ -11,4 +11,4 @@ def index():
     """
     Pylint told me to write in here
     """
-    return 'Hello World'
+    return 'Hello World! I am learning FastAPI, AWS DynamoDB, Docker and Kubernetes'
