@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-dynamo-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fastapi-dynamo
+  template:
+    metadata:
+      name: fastapi-dynamo
+      labels:
+        app: fastapi-dynamo
+    spec:
+      containers:
+      - name: fastapi-dynamo
+        image: agusrichard/fastapi-dynamo
+        resources:
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+          requests:
+            cpu: "1"
+            memory: "1Gi"
