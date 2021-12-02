@@ -16,6 +16,13 @@ spec:
       containers:
       - name: fastapi-dynamo
         image: agusrichard/fastapi-dynamo
+        imagePullPolicy: Always
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 2
         resources:
           limits:
             cpu: "1"
