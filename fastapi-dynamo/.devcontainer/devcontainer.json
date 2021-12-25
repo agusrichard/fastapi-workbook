@@ -2,24 +2,16 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/python-3
 {
 	"name": "Python 3",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": "..",
-		"args": { 
-			// Update 'VARIANT' to pick a Python version: 3, 3.10, 3.9, 3.8, 3.7, 3.6
-			// Append -bullseye or -buster to pin to an OS version.
-			// Use -bullseye variants on local on arm64/Apple Silicon.
-			"VARIANT": "3.9",
-			// Options
-			"NODE_VERSION": "lts/*"
-		}
-	},
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspace/fastapi-dynamo",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/zsh",
 		"python.defaultInterpreterPath": "/usr/local/bin/python",
 		"python.linting.enabled": true,
-		"python.linting.pylintEnabled": true,
+		"python.linting.pylintEnabled": false,
 		"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
 		"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
 		"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
@@ -34,17 +26,18 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-python.python",
-		"ms-python.vscode-pylance"
+		"ms-python.vscode-pylance",
+		"github.copilot"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [5000, 8000, 8001],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pip install -r requirements.txt",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode",
+	// "remoteUser": "vscode",
 	"features": {
 		"docker-in-docker": "latest",
 		"git": "latest"
