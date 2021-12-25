@@ -6,7 +6,7 @@ h11==0.12.0
 Mako==1.1.4
 MarkupSafe==1.1.1
 psycopg2==2.8.6
-pydantic==1.7.3
+pydantic==1.7.4
 python-dateutil==2.8.1
 python-dotenv==0.15.0
 python-editor==1.0.4
