@@ -3,7 +3,7 @@ click==7.1.2
 fastapi==0.63.0
 FastAPI-SQLAlchemy==0.2.1
 h11==0.12.0
-Mako==1.1.4
+Mako==1.2.2
 MarkupSafe==1.1.1
 psycopg2==2.8.6
 pydantic==1.7.3
